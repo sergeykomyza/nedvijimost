@@ -1,0 +1,21 @@
+-
+	const reviews = [
+		{img: 'avatar-1.png', name: 'Василий Иванов'},
+		{img: 'avatar-2.png', name: 'Антон Валентов'},
+		{img: 'avatar-3.png', name: 'Анатолий Куратов'},
+		{img: 'avatar-3.png', name: 'Анатолий Куратов'}
+	]
+
+section#reviews.reviews 
+	.container 
+		h6.section-title.reviews__title #[b Что пишут о нас клиенты,] которые #[br] уже доверили нам покупку недвижимости
+		.reviews__slider.swiper 
+			.swiper-wrapper 
+				each item in reviews 
+					.review.swiper-slide
+						.review__author 
+							img.review__ava(src="img/"+item.img, alt="/")
+							h6.review__name= item.name 
+						p.review__text Уже установили три окна этой компании. Замеры производит сам директор. Цена вполне доступная. Все исполнено в срок! Качество устраивает на 100% Отдельное Спасибо монтажнику Денису и его напарнику ! Достоин поощрения ! Демонтаж старых деревянных окон произвели бережно. Монтаж новых сделали быстро, качественно! Будем рекомендовать вашу компанию!
+						button.review__button Читать отзыв полностью
+		.swiper-pagination

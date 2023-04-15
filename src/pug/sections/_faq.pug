@@ -1,0 +1,21 @@
+section#faq.faq 
+	.container 
+		h6.faq__title.section-title #[b Ответы] на часто задаваемые вопросы
+		.faq__box 
+			.accordeon
+				.accordeon__box
+					each item in ['Могу ли я получить ВНЖ или Гражданство Турции?','Что дает мне ВНЖ?','Могу ли я устроится на работу при наличии ВНЖ?','Какие налоги я буду оплачивать при покупке <br> и продаже недвижимости?']
+						.accordeon__item
+							.accordeon__header 
+								p !{item} 
+									img(src="img/icon-arrow.svg", alt="/") 
+							.accordeon__content
+								| Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nam consequatur magnam molestiae architecto rerum, non voluptatum magni pariatur in vel dolore accusantium reiciendis omnis, eveniet ipsa laboriosam quidem fugit?
+				.accordeon__box
+					each item in ['Сколько стоят коммунальные услуги?','Почему реальная площадь недвижимости <br> не соответствует документам?','Сохранится ли моя пенсия при переезде на ПМЖ в Турцию?','Какие расходы я понесу при оформлении <br> приобретенной недвижимости?']
+						.accordeon__item
+							.accordeon__header 
+								p !{item} 
+									img(src="img/icon-arrow.svg", alt="/") 
+							.accordeon__content
+								| Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nam consequatur magnam molestiae architecto rerum, non voluptatum magni pariatur in vel dolore accusantium reiciendis omnis, eveniet ipsa laboriosam quidem fugit?

@@ -1,0 +1,126 @@
+@import 'blocks/fonts';
+@import 'blocks/vars';
+
+/* ===================================================================*/
+/* ====================================================== main styles */ 
+/*====================================================================*/
+
+
+*,
+p,
+figure,
+h1,h2,h3,h4,h5,h6{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	line-height: normal;
+}
+html{ 
+	overflow-x: hidden;
+	&.popup-open{
+		overflow-y: hidden;
+	}
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	color: var(--color-black);
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{ 
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+	}
+}
+b{
+	font-weight: 700;
+}
+button{ 
+	background: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	&:focus{
+		outline: none;
+	}
+}
+input{
+	outline: none;
+}
+
+section{
+	position: relative;
+}
+
+.container{
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.section-title{
+	font-size: 30px;
+	font-weight: 300;
+	line-height: 41px;
+	color: var(--black);
+	@media(max-width: 992px){
+		font-size: 23px;
+		line-height: 25px;
+	}
+}
+.font-gold{
+	color: var(--color-gold);
+	&:hover{
+		color: var(--color-gold);
+	}
+}
+
+.mobile{
+	display: none;
+	@media(max-width: 992px){
+		display: block;
+	}
+}
+.desktop{
+	@media(max-width: 992px){
+		display: none;
+	}
+}
+
+// ======================================== TEMPLATES
+@import 'blocks/templates';
+// ======================================== HEADER
+@import 'blocks/header';
+// ======================================== HOME
+@import 'blocks/home';
+// ======================================== QUIZ
+@import 'blocks/quiz';
+// ======================================== OBJECTS
+@import 'blocks/objects';
+// ======================================== ADVANTAGES
+@import 'blocks/advantages';
+// ======================================== GUARANTEE
+@import 'blocks/guarantee';
+// ======================================== RECORD
+@import 'blocks/record';
+// ======================================== STEPS
+@import 'blocks/steps';
+// ======================================== REVIEWS
+@import 'blocks/reviews';
+// ======================================== APPLICATION
+@import 'blocks/application';
+// ======================================== FAQ
+@import 'blocks/faq';
+// ======================================== ABOUT
+@import 'blocks/about';
+// ======================================== CONTACTS
+@import 'blocks/contacts';
+// ======================================== FOOTER
+@import 'blocks/footer';

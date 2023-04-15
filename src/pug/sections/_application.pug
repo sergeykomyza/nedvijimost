@@ -1,0 +1,20 @@
+section#application.application 
+	.container 
+		.application__box 
+			.application__info 
+				.application__innertitle #[b Оформите заявку] #[br] и начните поиск заявку
+				ul.application__list 
+					each item, i in ['<b>Выясним</b> ваши предпочтения <br> в недвижимости','<b>Расскажем</b> об особенностях <br> недвижимости в Турции','<b>Сделаем</b> предварительный <br> подбор по ценовому сегменту','<b>Пригласим</b> в Турцию для <br> просмотра объекта ','<b>Уточним</b> в какие сроки вы <br> хотите прилететь и совершить покупку']
+						li.application__item
+							span.application__num= `0${i+1}` 
+							| !{item}
+			
+			.application-form 
+				.application-form__title #[b.font-gold Не откладывай] #[br] покупку недвижимости #[br] в ожидании снижения цен
+				form.form(action="")
+					input.form__input(type="text" placeholder="Как вас зовут ?")
+					input.form__input.js-maskPhone(type="text" placeholder="Ваш номер телефона")
+					button.form__button Оформить заявку
+					label.form__agree 
+						input(type="checkbox" checked)
+						span Нажимая на кнопку, вы соглашаетесь с #[br] #[a(href="/" class="font-gold") политикой конфиденциальности] 

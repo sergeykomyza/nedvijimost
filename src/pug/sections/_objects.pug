@@ -1,0 +1,104 @@
+section.objects#objects 
+	.container
+		h3.section-title.objects__title #[b Объекты] недвижимости в продаже
+		.tabs
+			.tabs__wrap
+				.tabs-headbox
+					img(src="img/icon-arrow-white.svg", alt="")
+				.tabs__buttons 
+					button.tab Жилые комплексы
+					button.tab Отдельные апартаменты
+					button.tab Виллы
+					button.tab Коммерческая недвижимость
+			.tabs__contents 
+				.tabs__content
+					.objects__box
+				.tabs__content 
+					.swiper.objects__slider 
+						.swiper-wrapper 
+							each item in [1, 2, 3, 4, 5]
+								.object-preview.swiper-slide 
+									img.object-preview__img(src="img/object-1.png", alt="/")
+									.object-preview__info
+										h6.object-preview__name Проект жилого комплекса в районе Мерсине
+										.object-preview__datas 
+											.object-preview__data 
+												img.object-preview__icon(src="img/icon-marker.svg", alt="/")
+												span.object-preview__val Алания, Мерсине
+											.object-preview__data 
+												img.object-preview__icon(src="img/icon-square.svg", alt="/")
+												span.object-preview__val от 70 м2
+											.object-preview__data 
+												img.object-preview__icon(src="img/icon-home.svg", alt="/")
+												span.object-preview__val Апартаменты
+											.object-preview__data 
+												img.object-preview__icon(src="img/icon-calendar.svg", alt="/")
+												span.object-preview__val 2024
+										.object-preview__price 
+											span от 200 000 $
+											a.object-preview__more(data-popup='popup' href="#modal")
+												img(src="img/icon-button.svg", alt="/")
+					button.next-slide 
+						img(src="img/slider-arrow.svg", alt="/")
+					button.objects__more Показать больше
+				.tabs__content 
+					.swiper.objects__slider 
+						.swiper-wrapper 
+							each item in [1, 2, 3, 4, 5]
+								.object-preview.swiper-slide 
+									img.object-preview__img(src="img/object-1.png", alt="/")
+									.object-preview__info
+										h6.object-preview__name Уникальный комплекс класса люкс в Ялте
+										.object-preview__datas 
+											.object-preview__data 
+												img.object-preview__icon(src="img/icon-marker.svg", alt="/")
+												span.object-preview__val Алания, Мерсине
+											.object-preview__data 
+												img.object-preview__icon(src="img/icon-square.svg", alt="/")
+												span.object-preview__val от 70 м2
+											.object-preview__data 
+												img.object-preview__icon(src="img/icon-home.svg", alt="/")
+												span.object-preview__val Апартаменты
+											.object-preview__data 
+												img.object-preview__icon(src="img/icon-calendar.svg", alt="/")
+												span.object-preview__val 2024
+										.object-preview__price 
+											span от 200 000 $
+											a.object-preview__more(data-popup='popup' href="#modal")
+												img(src="img/icon-button.svg", alt="/")
+					button.next-slide 
+						img(src="img/slider-arrow.svg", alt="/")
+					button.objects__more Показать больше
+				.tabs__content 
+					.swiper.objects__slider 
+						.swiper-wrapper 
+							each item in [1, 2, 3, 4, 5]
+								.object-preview.swiper-slide 
+									img.object-preview__img(src="img/object-1.png", alt="/")
+									.object-preview__info
+										h6.object-preview__name Проект жилого комплекса в Сочи
+										.object-preview__datas 
+											.object-preview__data 
+												img.object-preview__icon(src="img/icon-marker.svg", alt="/")
+												span.object-preview__val Алания, Мерсине
+											.object-preview__data 
+												img.object-preview__icon(src="img/icon-square.svg", alt="/")
+												span.object-preview__val от 70 м2
+											.object-preview__data 
+												img.object-preview__icon(src="img/icon-home.svg", alt="/")
+												span.object-preview__val Апартаменты
+											.object-preview__data 
+												img.object-preview__icon(src="img/icon-calendar.svg", alt="/")
+												span.object-preview__val 2024
+										.object-preview__price 
+											span от 200 000 $
+											a.object-preview__more(data-popup='popup' href="#modal")
+												img(src="img/icon-button.svg", alt="/")
+					button.next-slide 
+						img(src="img/slider-arrow.svg", alt="/")
+					button.objects__more Показать больше
+				
+
+dialog.popup
+
+include ./../sections/_modals.pug

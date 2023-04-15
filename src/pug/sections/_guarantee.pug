@@ -1,0 +1,30 @@
+-
+	const guarantee = [
+		{title: 'Удобный сервис',         text: 'Сопровождение нашими специалистами на протяжении всего срока сделки. Постпродажное сопровождение вашей недвижимости'},
+		{title: 'Сэкономьте деньги',      text: 'Беспроцентная рассрочка на весь период строительства вашего комплекса. Минимальные первоначальные взносы'},
+		{title: 'Удобство покупки',       text: 'Удобные графики платежей. презентация и покупка в режиме “онлайн”. Эксклюзивные, закрытые продажи на стадии котлована'},
+		{title: 'Удачное инвестирование', text: 'Консультации по выгодному инвестированию для перепродажи, аренды или жизни'}
+	]
+
+	const statistics = [
+		{num: '1 500', val: 'Объектов'},
+		{num: '450',   val: 'Довольных <br> покупателей'},
+		{num: '75',    val: 'Объектов <br> в управлении'},
+		{num: '20',    val: 'Партнеров <br> в регионах'}
+	]
+
+section#guarantee.guarantee 
+	.container 
+		h5.section-title.guarantee__title 
+			b Мы даем гарантии
+		.guarantee__box
+			each item, i in guarantee
+				article.guarantee-item 
+					span.guarantee-item__num= `0${i+1}`
+					h6.guarantee-item__title= item.title
+					p.guarantee-item__text !{item.text}
+		.statistics 
+			each item in statistics
+				.statistics__item
+					.statistics__num= item.num 
+					p.statistics__val !{item.val}

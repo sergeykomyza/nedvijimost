@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Site | Список страниц
+
+		style.
+			.index-page{
+				padding: 40px 0;
+				text-align: center;
+			}
+			.index-page h1{
+				margin: 0 0 30px 0;
+				font-size: 60px;
+			}
+			.index-page ul li{
+				margin: 0 0 10px 0;
+			}
+			.index-page ul a{
+				position: relative;
+				display: block;
+				color: #000;
+				font-size: 20px;
+			}
+			.index-page ul a:after{
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #DDD;
+				transform: scaleX(0);
+				transition: transform .3s, background .3s;
+			}
+			.index-page ul a:hover:after{
+				transform: scaleX(1);
+			}
+
+	-
+		menu = [
+			{title: 'Templates',  href: 'templates.html'},
+			{title: 'Главная',    href: 'home.html'},
+			{title: 'Сcылка на макет', href: 'https://www.figma.com/file/WQqJr1CAC5mik5GWHeqldM/%D0%9D%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C-%D0%B2-%D0%A2%D1%83%D1%80%D1%86%D0%B8%D0%B8?node-id=0-1'}
+		]
+
+	body
+		.index-page
+			h1 Список страниц
+
+			ul 
+				each item in menu 
+					li 
+						a(href="" + item.href target="_blank")= item.title
+
+

@@ -1,0 +1,113 @@
+-
+	const step1 = [
+		{img: 'test-1.png', name: 'для получения гражданства'},
+		{img: 'test-2.png', name: 'для перепродажи или сдачи в аренду'},
+		{img: 'test-3.png', name: 'для инвестирования и получения ВНЖ '},
+		{img: 'test-4.png', name: 'для постоянного проживания'}
+	]
+	const step2 = [
+		{img: 'test-5.png', name: 'жилой комплекс'},
+		{img: 'test-6.png', name: 'вилла'},
+		{img: 'test-7.png', name: 'отельный аппартамент'},
+		{img: 'test-8.png', name: 'коммерческая недвижимость '}
+	]
+	const step3 = [
+		{img: 'test-9.png', name: 'вид на море'},
+		{img: 'test-10.png', name: 'высокая ликвидность'},
+		{img: 'test-11.png', name: 'спальный район'},
+		{img: 'test-12.png', name: 'центр города'},
+		{img: 'test-13.png', name: 'близость школ и садиков'},
+		{img: 'test-14.png', name: 'близость транспортной развязки'},
+	]
+	const step4 = ['готов на заселение','полгода до заселения','год до заселения','на этапе котлована']
+	const step5 = ['100 000 - 200 000 USD','200 000 - 350 000 USD','400 000 USD (гражданство)','+500 000 USD']
+
+section.test#test 
+	.container 
+		.test__box
+			.test__inner
+				h2.test__title.section-title За одну минуту #[b.font-gold пройдите бесплатный тест] #[br] и получите лучшее предложение персонально для вас
+				.test__wrapper 
+					.test-info 
+						.test-info__title #[b Ответьте на 5 вопросов,] #[br] чтобы мы могли #[br] помочь в подборе квартиры
+						.test-info__reward 
+							.test-info__title #[b В конце теста получите:]
+							.test-info__items
+								.test-info__item.test-info__item--variants 
+									p.test-info__itemname #[b Персональную подборку] #[br] вариантов
+									img.test-info__icon(src="img/document.png", alt="/")
+								.test-info__item.test-info__item--prize
+									p.test-info__itemname Гарантированный #[b подарок]
+									img.test-info__icon(src="img/present.png", alt="/")
+					.quiz 
+						.quiz__progress 
+							p.quiz__countbox Вы отвечаете на #[span.quiz__count ] вопрос из 5
+							.quiz__progressline
+						form.form.quiz__form(action="#")
+							.quiz__box(data-step='1')
+								.quiz__title С какой целью планируете покупку недвижимости?
+								.quiz__step1
+									each item, i in step1
+										figure.option-img
+											label.label 
+												input.label__radio(type="radio" data-num='1' autocomplete="off" name="select1")  
+												span.label__check
+											img.option-img__foto(src="img/" + item.img, alt="/")
+											figcaption.option-img__name= item.name
+							.quiz__box(data-step='2') 
+								.quiz__title Тип недвижимости?
+								.quiz__step2
+									each item, i in step2
+										figure.option-img
+											label.label 
+												input.label__radio(type="radio"  data-num='2' autocomplete="off" name="select2")  
+												span.label__check
+											img.option-img__foto(src="img/" + item.img, alt="/")
+											figcaption.option-img__name= item.name
+							.quiz__box(data-step='3') 
+								.quiz__title Что для вас важно при выборе квартиры?
+								.quiz__step3
+									each item, i in step3
+										figure.option-img
+											label.label
+												input.label__radio(type="radio"  data-num='3' autocomplete="off" name="select3")  
+												span.label__check
+											img.option-img__foto(src="img/" + item.img, alt="/")
+											figcaption.option-img__name= item.name
+							.quiz__box(data-step='4') 
+								.quiz__title Степень готовности объекта
+								.quiz__step4 
+									each item, i in step4 
+										ul.option-list 
+											li.option-list__item 
+												span.option-list__name= item
+												label.label
+													input.label__radio(type="radio"  data-num='4' autocomplete="off" name="select4") 
+													span.label__check.label__check--list
+							.quiz__box(data-step='5') 
+								.quiz__title Какой у вас бюджет?
+								.quiz__step5 
+									each item, i in step5 
+										ul.option-list 
+											li.option-list__item 
+												span= item
+												label.label
+													input.label__radio(type="radio"  data-num='5' autocomplete="off" name="select5")  
+													span.label__check.label__check--list
+							.quiz__box(data-step='6') 
+								.quiz__step6.finish 
+									p.finish__good Отлично!
+									h6.finish__title Наш менеджер уже приступил к подбору недвижимости!
+									input.form__input(type="text" placeholder="Как вас зовут ?") 
+									input.form__input.js-maskPhone(type="text" placeholder="Ваш номер телефона")
+									.finish__button Отправить
+									label.form__agree 
+										input(type="checkbox" checked)
+										span Нажимая на кнопку, вы соглашаетесь с #[br] #[a(href="/" class="font-gold") политикой конфиденциальности]
+							.quiz__submit
+								.quiz__buttons
+									button.quiz__next Далее
+									button.quiz__prev Назад
+								.quiz__explanation Вы берете один из вариантов #[br] и #[span.font-gold нажмите кнопку “Далее”]
+
+

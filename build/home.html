@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- favicon-->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+    <!-- fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css"/>
+    <!-- slick slider -->
+    <!-- link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")-->
+    <!-- swiper slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- animate css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"/>
+    <!-- custom styles-->
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>Site </title>
+  </head>
+  <body>
+    <!-- ======================================== HEADER-->
+    <header class="header"> 
+      <div class="container header__box"> 
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#about">О компании</a></li>
+          <li class="menu__item"><a class="menu__link" href="#objects">Портфолио</a></li>
+          <li class="menu__item"><a class="menu__link" href="#reviews">Отзывы</a></li>
+          <li class="menu__item"><a class="menu__link" href="#faq">Вопросы</a></li>
+          <li class="menu__item"><a class="menu__link" href="#contacts">Контакты</a></li>
+        </ul>
+        <div class="header-feedback"><span class="header-feedback__text">Задайте вопрос, <br/> мы онлайн</span><a class="header-feedback__link" href="/"><img src="img/icon-telegram.svg" alt="/"/></a><a class="header-feedback__link" href="/">
+            <svg class="whatsapp-icon" id="whatsapp" width="23" height="23" fill-rule="evenodd" clip-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 512 512">
+              <path class="whatsapp-icon__bg" fill="#979A9E" d="M256 0c141.39,0 256,114.61 256,256 0,141.39 -114.61,256 -256,256 -141.39,0 -256,-114.61 -256,-256 0,-141.39 114.61,-256 256,-256z"></path>
+              <path class="whatsapp-icon__figure" fill="#363A40" d="M256 373.82c-20.85,0 -41.37,-5.55 -59.32,-16.04 -2.89,-1.69 -6.37,-2.14 -9.6,-1.26l-39.03 10.71 13.6 -29.95c1.85,-4.07 1.37,-8.82 -1.24,-12.45 -14.55,-20.15 -22.23,-43.96 -22.23,-68.83 0,-64.97 52.85,-117.82 117.82,-117.82 64.97,0 117.82,52.85 117.82,117.82 0,64.97 -52.85,117.82 -117.82,117.82zm0 -260.58c-78.72,0 -142.75,64.04 -142.75,142.76 0,27.69 7.85,54.28 22.8,77.36l-21.69 47.77c-2,4.41 -1.27,9.57 1.86,13.25 2.41,2.81 5.9,4.38 9.49,4.38 8.04,0 51.89,-13.78 63.05,-16.85 20.63,11.04 43.76,16.85 67.24,16.85 78.71,0 142.76,-64.05 142.76,-142.76 0,-78.72 -64.05,-142.75 -142.76,-142.76z"></path>
+              <path class="whatsapp-icon__figure" fill="#363A40" d="M290.08 272.69c-5.4,2.21 -8.85,10.67 -12.35,14.99 -1.8,2.21 -3.94,2.56 -6.7,1.45 -20.28,-8.08 -35.83,-21.62 -47.02,-40.28 -1.9,-2.89 -1.56,-5.18 0.73,-7.87 3.38,-3.98 7.63,-8.5 8.54,-13.87 2.03,-11.86 -13.48,-48.67 -33.97,-31.99 -58.95,48.04 98.34,175.45 126.73,106.54 8.03,-19.54 -27,-32.64 -35.96,-28.97z"></path>
+            </svg></a></div>
+        <div class="header-phone"> <a class="header-phone__num" href="+79057609610">+7 (905) 760-96-10</a><a class="header-phone__order" href="/">Заказать звонок</a></div>
+        <div class="mobile">
+          <div class="burger js-mMenuToggle"><span> </span><span> </span><span> </span></div>
+        </div>
+      </div>
+    </header>
+    <!-- ======================================== HOME-->
+    <section class="home" id="home"> 
+      <div class="container home__box"> 
+        <h1 class="home__title">Квартиры у моря <br/> <b>от 49 000 евро</b> </h1>
+        <p class="home__tagtitle">Оставьте заявку и мы подберем <br/> для Вас <b>лучшее предложение</b></p>
+        <button class="home__button" data-popup="popup" data-src="#modal-form">Подобрать квартиру</button>
+        <div class="home__advantages"> 
+          <div class="home__advantage"><b>Беспроцентная рассрочка</b> на весь период строительства вашего комплекса</div>
+          <div class="home__advantage"><b>Консультации по выгодному</b> инвестированию для перепродажи, аренды или жизни</div>
+          <div class="home__advantage"><b>Удобные графики платежей,</b> презентация и покупка в режиме “онлайн”</div>
+          <div class="home__advantage"><b>Сопровождение</b> нашими специалистами на протяжении всего срока сделки</div>
+        </div>
+      </div>
+    </section>
+    <!-- ======================================== QUIZ-->
+    <section class="test" id="test"> 
+      <div class="container"> 
+        <div class="test__box">
+          <div class="test__inner">
+            <h2 class="test__title section-title">За одну минуту <b class="font-gold">пройдите бесплатный тест</b> <br/> и получите лучшее предложение персонально для вас</h2>
+            <div class="test__wrapper"> 
+              <div class="test-info"> 
+                <div class="test-info__title"><b>Ответьте на 5 вопросов,</b> <br/> чтобы мы могли <br/> помочь в подборе квартиры</div>
+                <div class="test-info__reward"> 
+                  <div class="test-info__title"><b>В конце теста получите:</b></div>
+                  <div class="test-info__items">
+                    <div class="test-info__item test-info__item--variants"> 
+                      <p class="test-info__itemname"><b>Персональную подборку</b> <br/> вариантов</p><img class="test-info__icon" src="img/document.png" alt="/"/>
+                    </div>
+                    <div class="test-info__item test-info__item--prize">
+                      <p class="test-info__itemname">Гарантированный <b>подарок</b></p><img class="test-info__icon" src="img/present.png" alt="/"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz"> 
+                <div class="quiz__progress"> 
+                  <p class="quiz__countbox">Вы отвечаете на <span class="quiz__count"></span> вопрос из 5</p>
+                  <div class="quiz__progressline"></div>
+                </div>
+                <form class="form quiz__form" action="#">
+                  <div class="quiz__box" data-step="1">
+                    <div class="quiz__title">С какой целью планируете покупку недвижимости?</div>
+                    <div class="quiz__step1">
+                      <figure class="option-img">
+                        <label class="label"> 
+                          <input class="label__radio" type="radio" data-num="1" autocomplete="off" name="select1"/><span class="label__check"></span>
+                        </label><img class="option-img__foto" src="img/test-1.png" alt="/"/>
+                        <figcaption class="option-img__name">для получения гражданства</figcaption>
+                      </figure>
+                      <figure class="option-img">
+                        <label class="label"> 
+                          <input class="label__radio" type="radio" data-num="1" autocomplete="off" name="select1"/><span class="label__check"></span>
+                        </label><img class="option-img__foto" src="img/test-2.png" alt="/"/>
+                        <figcaption class="option-img__name">для перепродажи или сдачи в аренду</figcaption>
+                      </figure>
+                      <figure class="option-img">
+                        <label class="label"> 
+                          <input class="label__radio" type="radio" data-num="1" autocomplete="off" name="select1"/><span class="label__check"></span>
+                        </label><img class="option-img__foto" src="img/test-3.png" alt="/"/>
+                        <figcaption class="option-img__name">для инвестирования и получения ВНЖ </figcaption>
+                      </figure>
+                      <figure class="option-img">
+                        <label class="label"> 
+                          <input class="label__radio" type="radio" data-num="1" autocomplete="off" name="select1"/><span class="label__check"></span>
+                        </label><img class="option-img__foto" src="img/test-4.png" alt="/"/>
+                        <figcaption class="option-img__name">для постоянного проживания</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="quiz__box" data-step="2"> 
+                    <div class="quiz__title">Тип недвижимости?</div>
+                    <div class="quiz__step2">
+                      <figure class="option-img">
+                        <label class="label"> 
+                          <input class="label__radio" type="radio" data-num="2" autocomplete="off" name="select2"/><span class="label__check"></span>
+                        </label><img class="option-img__foto" src="img/test-5.png" alt="/"/>
+                        <figcaption class="option-img__name">жилой комплекс</figcaption>
+                      </figure>
+                      <figure class="option-img">
+                        <label class="label"> 
+                          <input class="label__radio" type="radio" data-num="2" autocomplete="off" name="select2"/><span class="label__check"></span>
+                        </label><img class="option-img__foto" src="img/test-6.png" alt="/"/>
+                        <figcaption class="option-img__name">вилла</figcaption>
+                      </figure>
+                      <figure class="option-img">
+                        <label class="label"> 
+                          <input class="label__radio" type="radio" data-num="2" autocomplete="off" name="select2"/><span class="label__check"></span>
+                        </label><img class="option-img__foto" src="img/test-7.png" alt="/"/>
+                        <figcaption class="option-img__name">отельный аппартамент</figcaption>
+                      </figure>
+                      <figure class="option-img">
+                        <label class="label"> 
+                          <input class="label__radio" type="radio" data-num="2" autocomplete="off" name="select2"/><span class="label__check"></span>
+                        </label><img class="option-img__foto" src="img/test-8.png" alt="/"/>
+                        <figcaption class="option-img__name">коммерческая недвижимость </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="quiz__box" data-step="3"> 
+                    <div class="quiz__title">Что для вас важно при выборе квартиры?</div>
+                    <div class="quiz__step3">
+                      <figure class="option-img">
+                        <label class="label">
+                          <input class="label__radio" type="radio" data-num="3" autocomplete="off" name="select3"/><span class="label__check"></span>
+                        </label><img class="option-img__foto" src="img/test-9.png" alt="/"/>
+                        <figcaption class="option-img__name">вид на море</figcaption>
+                      </figure>
+                      <figure class="option-img">
+                        <label class="label">
+                          <input class="label__radio" type="radio" data-num="3" autocomplete="off" name="select3"/><span class="label__check"></span>
+                        </label><img class="option-img__foto" src="img/test-10.png" alt="/"/>
+                        <figcaption class="option-img__name">высокая ликвидность</figcaption>
+                      </figure>
+                      <figure class="option-img">
+                        <label class="label">
+                          <input class="label__radio" type="radio" data-num="3" autocomplete="off" name="select3"/><span class="label__check"></span>
+                        </label><img class="option-img__foto" src="img/test-11.png" alt="/"/>
+                        <figcaption class="option-img__name">спальный район</figcaption>
+                      </figure>
+                      <figure class="option-img">
+                        <label class="label">
+                          <input class="label__radio" type="radio" data-num="3" autocomplete="off" name="select3"/><span class="label__check"></span>
+                        </label><img class="option-img__foto" src="img/test-12.png" alt="/"/>
+                        <figcaption class="option-img__name">центр города</figcaption>
+                      </figure>
+                      <figure class="option-img">
+                        <label class="label">
+                          <input class="label__radio" type="radio" data-num="3" autocomplete="off" name="select3"/><span class="label__check"></span>
+                        </label><img class="option-img__foto" src="img/test-13.png" alt="/"/>
+                        <figcaption class="option-img__name">близость школ и садиков</figcaption>
+                      </figure>
+                      <figure class="option-img">
+                        <label class="label">
+                          <input class="label__radio" type="radio" data-num="3" autocomplete="off" name="select3"/><span class="label__check"></span>
+                        </label><img class="option-img__foto" src="img/test-14.png" alt="/"/>
+                        <figcaption class="option-img__name">близость транспортной развязки</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="quiz__box" data-step="4"> 
+                    <div class="quiz__title">Степень готовности объекта</div>
+                    <div class="quiz__step4"> 
+                      <ul class="option-list"> 
+                        <li class="option-list__item"> <span class="option-list__name">готов на заселение</span>
+                          <label class="label">
+                            <input class="label__radio" type="radio" data-num="4" autocomplete="off" name="select4"/><span class="label__check label__check--list"></span>
+                          </label>
+                        </li>
+                      </ul>
+                      <ul class="option-list"> 
+                        <li class="option-list__item"> <span class="option-list__name">полгода до заселения</span>
+                          <label class="label">
+                            <input class="label__radio" type="radio" data-num="4" autocomplete="off" name="select4"/><span class="label__check label__check--list"></span>
+                          </label>
+                        </li>
+                      </ul>
+                      <ul class="option-list"> 
+                        <li class="option-list__item"> <span class="option-list__name">год до заселения</span>
+                          <label class="label">
+                            <input class="label__radio" type="radio" data-num="4" autocomplete="off" name="select4"/><span class="label__check label__check--list"></span>
+                          </label>
+                        </li>
+                      </ul>
+                      <ul class="option-list"> 
+                        <li class="option-list__item"> <span class="option-list__name">на этапе котлована</span>
+                          <label class="label">
+                            <input class="label__radio" type="radio" data-num="4" autocomplete="off" name="select4"/><span class="label__check label__check--list"></span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="quiz__box" data-step="5"> 
+                    <div class="quiz__title">Какой у вас бюджет?</div>
+                    <div class="quiz__step5"> 
+                      <ul class="option-list"> 
+                        <li class="option-list__item"> <span>100 000 - 200 000 USD</span>
+                          <label class="label">
+                            <input class="label__radio" type="radio" data-num="5" autocomplete="off" name="select5"/><span class="label__check label__check--list"></span>
+                          </label>
+                        </li>
+                      </ul>
+                      <ul class="option-list"> 
+                        <li class="option-list__item"> <span>200 000 - 350 000 USD</span>
+                          <label class="label">
+                            <input class="label__radio" type="radio" data-num="5" autocomplete="off" name="select5"/><span class="label__check label__check--list"></span>
+                          </label>
+                        </li>
+                      </ul>
+                      <ul class="option-list"> 
+                        <li class="option-list__item"> <span>400 000 USD (гражданство)</span>
+                          <label class="label">
+                            <input class="label__radio" type="radio" data-num="5" autocomplete="off" name="select5"/><span class="label__check label__check--list"></span>
+                          </label>
+                        </li>
+                      </ul>
+                      <ul class="option-list"> 
+                        <li class="option-list__item"> <span>+500 000 USD</span>
+                          <label class="label">
+                            <input class="label__radio" type="radio" data-num="5" autocomplete="off" name="select5"/><span class="label__check label__check--list"></span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="quiz__box" data-step="6"> 
+                    <div class="quiz__step6 finish"> 
+                      <p class="finish__good">Отлично!</p>
+                      <h6 class="finish__title">Наш менеджер уже приступил к подбору недвижимости!</h6>
+                      <input class="form__input" type="text" placeholder="Как вас зовут ?"/>
+                      <input class="form__input js-maskPhone" type="text" placeholder="Ваш номер телефона"/>
+                      <div class="finish__button">Отправить</div>
+                      <label class="form__agree"> 
+                        <input type="checkbox" checked="checked"/><span>Нажимая на кнопку, вы соглашаетесь с <br/> <a class="font-gold" href="/">политикой конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="quiz__submit">
+                    <div class="quiz__buttons">
+                      <button class="quiz__next">Далее</button>
+                      <button class="quiz__prev">Назад</button>
+                    </div>
+                    <div class="quiz__explanation">Вы берете один из вариантов <br/> и <span class="font-gold">нажмите кнопку “Далее”</span></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======================================== OBJECTS-->
+    <section class="objects" id="objects"> 
+      <div class="container">
+        <h3 class="section-title objects__title"><b>Объекты</b> недвижимости в продаже</h3>
+        <div class="tabs">
+          <div class="tabs__wrap">
+            <div class="tabs-headbox"><img src="img/icon-arrow-white.svg" alt=""/></div>
+            <div class="tabs__buttons"> 
+              <button class="tab">Жилые комплексы</button>
+              <button class="tab">Отдельные апартаменты</button>
+              <button class="tab">Виллы</button>
+              <button class="tab">Коммерческая недвижимость</button>
+            </div>
+          </div>
+          <div class="tabs__contents"> 
+            <div class="tabs__content">
+              <div class="objects__box"></div>
+            </div>
+            <div class="tabs__content"> 
+              <div class="swiper objects__slider"> 
+                <div class="swiper-wrapper"> 
+                  <div class="object-preview swiper-slide"> <img class="object-preview__img" src="img/object-1.png" alt="/"/>
+                    <div class="object-preview__info">
+                      <h6 class="object-preview__name">Проект жилого комплекса в районе Мерсине</h6>
+                      <div class="object-preview__datas"> 
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-marker.svg" alt="/"/><span class="object-preview__val">Алания, Мерсине</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-square.svg" alt="/"/><span class="object-preview__val">от 70 м2</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-home.svg" alt="/"/><span class="object-preview__val">Апартаменты</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-calendar.svg" alt="/"/><span class="object-preview__val">2024</span></div>
+                      </div>
+                      <div class="object-preview__price"> <span>от 200 000 $</span><a class="object-preview__more" data-popup="popup" href="#modal"><img src="img/icon-button.svg" alt="/"/></a></div>
+                    </div>
+                  </div>
+                  <div class="object-preview swiper-slide"> <img class="object-preview__img" src="img/object-1.png" alt="/"/>
+                    <div class="object-preview__info">
+                      <h6 class="object-preview__name">Проект жилого комплекса в районе Мерсине</h6>
+                      <div class="object-preview__datas"> 
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-marker.svg" alt="/"/><span class="object-preview__val">Алания, Мерсине</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-square.svg" alt="/"/><span class="object-preview__val">от 70 м2</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-home.svg" alt="/"/><span class="object-preview__val">Апартаменты</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-calendar.svg" alt="/"/><span class="object-preview__val">2024</span></div>
+                      </div>
+                      <div class="object-preview__price"> <span>от 200 000 $</span><a class="object-preview__more" data-popup="popup" href="#modal"><img src="img/icon-button.svg" alt="/"/></a></div>
+                    </div>
+                  </div>
+                  <div class="object-preview swiper-slide"> <img class="object-preview__img" src="img/object-1.png" alt="/"/>
+                    <div class="object-preview__info">
+                      <h6 class="object-preview__name">Проект жилого комплекса в районе Мерсине</h6>
+                      <div class="object-preview__datas"> 
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-marker.svg" alt="/"/><span class="object-preview__val">Алания, Мерсине</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-square.svg" alt="/"/><span class="object-preview__val">от 70 м2</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-home.svg" alt="/"/><span class="object-preview__val">Апартаменты</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-calendar.svg" alt="/"/><span class="object-preview__val">2024</span></div>
+                      </div>
+                      <div class="object-preview__price"> <span>от 200 000 $</span><a class="object-preview__more" data-popup="popup" href="#modal"><img src="img/icon-button.svg" alt="/"/></a></div>
+                    </div>
+                  </div>
+                  <div class="object-preview swiper-slide"> <img class="object-preview__img" src="img/object-1.png" alt="/"/>
+                    <div class="object-preview__info">
+                      <h6 class="object-preview__name">Проект жилого комплекса в районе Мерсине</h6>
+                      <div class="object-preview__datas"> 
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-marker.svg" alt="/"/><span class="object-preview__val">Алания, Мерсине</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-square.svg" alt="/"/><span class="object-preview__val">от 70 м2</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-home.svg" alt="/"/><span class="object-preview__val">Апартаменты</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-calendar.svg" alt="/"/><span class="object-preview__val">2024</span></div>
+                      </div>
+                      <div class="object-preview__price"> <span>от 200 000 $</span><a class="object-preview__more" data-popup="popup" href="#modal"><img src="img/icon-button.svg" alt="/"/></a></div>
+                    </div>
+                  </div>
+                  <div class="object-preview swiper-slide"> <img class="object-preview__img" src="img/object-1.png" alt="/"/>
+                    <div class="object-preview__info">
+                      <h6 class="object-preview__name">Проект жилого комплекса в районе Мерсине</h6>
+                      <div class="object-preview__datas"> 
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-marker.svg" alt="/"/><span class="object-preview__val">Алания, Мерсине</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-square.svg" alt="/"/><span class="object-preview__val">от 70 м2</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-home.svg" alt="/"/><span class="object-preview__val">Апартаменты</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-calendar.svg" alt="/"/><span class="object-preview__val">2024</span></div>
+                      </div>
+                      <div class="object-preview__price"> <span>от 200 000 $</span><a class="object-preview__more" data-popup="popup" href="#modal"><img src="img/icon-button.svg" alt="/"/></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="next-slide"> <img src="img/slider-arrow.svg" alt="/"/></button>
+              <button class="objects__more">Показать больше</button>
+            </div>
+            <div class="tabs__content"> 
+              <div class="swiper objects__slider"> 
+                <div class="swiper-wrapper"> 
+                  <div class="object-preview swiper-slide"> <img class="object-preview__img" src="img/object-1.png" alt="/"/>
+                    <div class="object-preview__info">
+                      <h6 class="object-preview__name">Уникальный комплекс класса люкс в Ялте</h6>
+                      <div class="object-preview__datas"> 
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-marker.svg" alt="/"/><span class="object-preview__val">Алания, Мерсине</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-square.svg" alt="/"/><span class="object-preview__val">от 70 м2</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-home.svg" alt="/"/><span class="object-preview__val">Апартаменты</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-calendar.svg" alt="/"/><span class="object-preview__val">2024</span></div>
+                      </div>
+                      <div class="object-preview__price"> <span>от 200 000 $</span><a class="object-preview__more" data-popup="popup" href="#modal"><img src="img/icon-button.svg" alt="/"/></a></div>
+                    </div>
+                  </div>
+                  <div class="object-preview swiper-slide"> <img class="object-preview__img" src="img/object-1.png" alt="/"/>
+                    <div class="object-preview__info">
+                      <h6 class="object-preview__name">Уникальный комплекс класса люкс в Ялте</h6>
+                      <div class="object-preview__datas"> 
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-marker.svg" alt="/"/><span class="object-preview__val">Алания, Мерсине</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-square.svg" alt="/"/><span class="object-preview__val">от 70 м2</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-home.svg" alt="/"/><span class="object-preview__val">Апартаменты</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-calendar.svg" alt="/"/><span class="object-preview__val">2024</span></div>
+                      </div>
+                      <div class="object-preview__price"> <span>от 200 000 $</span><a class="object-preview__more" data-popup="popup" href="#modal"><img src="img/icon-button.svg" alt="/"/></a></div>
+                    </div>
+                  </div>
+                  <div class="object-preview swiper-slide"> <img class="object-preview__img" src="img/object-1.png" alt="/"/>
+                    <div class="object-preview__info">
+                      <h6 class="object-preview__name">Уникальный комплекс класса люкс в Ялте</h6>
+                      <div class="object-preview__datas"> 
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-marker.svg" alt="/"/><span class="object-preview__val">Алания, Мерсине</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-square.svg" alt="/"/><span class="object-preview__val">от 70 м2</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-home.svg" alt="/"/><span class="object-preview__val">Апартаменты</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-calendar.svg" alt="/"/><span class="object-preview__val">2024</span></div>
+                      </div>
+                      <div class="object-preview__price"> <span>от 200 000 $</span><a class="object-preview__more" data-popup="popup" href="#modal"><img src="img/icon-button.svg" alt="/"/></a></div>
+                    </div>
+                  </div>
+                  <div class="object-preview swiper-slide"> <img class="object-preview__img" src="img/object-1.png" alt="/"/>
+                    <div class="object-preview__info">
+                      <h6 class="object-preview__name">Уникальный комплекс класса люкс в Ялте</h6>
+                      <div class="object-preview__datas"> 
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-marker.svg" alt="/"/><span class="object-preview__val">Алания, Мерсине</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-square.svg" alt="/"/><span class="object-preview__val">от 70 м2</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-home.svg" alt="/"/><span class="object-preview__val">Апартаменты</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-calendar.svg" alt="/"/><span class="object-preview__val">2024</span></div>
+                      </div>
+                      <div class="object-preview__price"> <span>от 200 000 $</span><a class="object-preview__more" data-popup="popup" href="#modal"><img src="img/icon-button.svg" alt="/"/></a></div>
+                    </div>
+                  </div>
+                  <div class="object-preview swiper-slide"> <img class="object-preview__img" src="img/object-1.png" alt="/"/>
+                    <div class="object-preview__info">
+                      <h6 class="object-preview__name">Уникальный комплекс класса люкс в Ялте</h6>
+                      <div class="object-preview__datas"> 
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-marker.svg" alt="/"/><span class="object-preview__val">Алания, Мерсине</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-square.svg" alt="/"/><span class="object-preview__val">от 70 м2</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-home.svg" alt="/"/><span class="object-preview__val">Апартаменты</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-calendar.svg" alt="/"/><span class="object-preview__val">2024</span></div>
+                      </div>
+                      <div class="object-preview__price"> <span>от 200 000 $</span><a class="object-preview__more" data-popup="popup" href="#modal"><img src="img/icon-button.svg" alt="/"/></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="next-slide"> <img src="img/slider-arrow.svg" alt="/"/></button>
+              <button class="objects__more">Показать больше</button>
+            </div>
+            <div class="tabs__content"> 
+              <div class="swiper objects__slider"> 
+                <div class="swiper-wrapper"> 
+                  <div class="object-preview swiper-slide"> <img class="object-preview__img" src="img/object-1.png" alt="/"/>
+                    <div class="object-preview__info">
+                      <h6 class="object-preview__name">Проект жилого комплекса в Сочи</h6>
+                      <div class="object-preview__datas"> 
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-marker.svg" alt="/"/><span class="object-preview__val">Алания, Мерсине</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-square.svg" alt="/"/><span class="object-preview__val">от 70 м2</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-home.svg" alt="/"/><span class="object-preview__val">Апартаменты</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-calendar.svg" alt="/"/><span class="object-preview__val">2024</span></div>
+                      </div>
+                      <div class="object-preview__price"> <span>от 200 000 $</span><a class="object-preview__more" data-popup="popup" href="#modal"><img src="img/icon-button.svg" alt="/"/></a></div>
+                    </div>
+                  </div>
+                  <div class="object-preview swiper-slide"> <img class="object-preview__img" src="img/object-1.png" alt="/"/>
+                    <div class="object-preview__info">
+                      <h6 class="object-preview__name">Проект жилого комплекса в Сочи</h6>
+                      <div class="object-preview__datas"> 
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-marker.svg" alt="/"/><span class="object-preview__val">Алания, Мерсине</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-square.svg" alt="/"/><span class="object-preview__val">от 70 м2</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-home.svg" alt="/"/><span class="object-preview__val">Апартаменты</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-calendar.svg" alt="/"/><span class="object-preview__val">2024</span></div>
+                      </div>
+                      <div class="object-preview__price"> <span>от 200 000 $</span><a class="object-preview__more" data-popup="popup" href="#modal"><img src="img/icon-button.svg" alt="/"/></a></div>
+                    </div>
+                  </div>
+                  <div class="object-preview swiper-slide"> <img class="object-preview__img" src="img/object-1.png" alt="/"/>
+                    <div class="object-preview__info">
+                      <h6 class="object-preview__name">Проект жилого комплекса в Сочи</h6>
+                      <div class="object-preview__datas"> 
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-marker.svg" alt="/"/><span class="object-preview__val">Алания, Мерсине</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-square.svg" alt="/"/><span class="object-preview__val">от 70 м2</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-home.svg" alt="/"/><span class="object-preview__val">Апартаменты</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-calendar.svg" alt="/"/><span class="object-preview__val">2024</span></div>
+                      </div>
+                      <div class="object-preview__price"> <span>от 200 000 $</span><a class="object-preview__more" data-popup="popup" href="#modal"><img src="img/icon-button.svg" alt="/"/></a></div>
+                    </div>
+                  </div>
+                  <div class="object-preview swiper-slide"> <img class="object-preview__img" src="img/object-1.png" alt="/"/>
+                    <div class="object-preview__info">
+                      <h6 class="object-preview__name">Проект жилого комплекса в Сочи</h6>
+                      <div class="object-preview__datas"> 
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-marker.svg" alt="/"/><span class="object-preview__val">Алания, Мерсине</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-square.svg" alt="/"/><span class="object-preview__val">от 70 м2</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-home.svg" alt="/"/><span class="object-preview__val">Апартаменты</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-calendar.svg" alt="/"/><span class="object-preview__val">2024</span></div>
+                      </div>
+                      <div class="object-preview__price"> <span>от 200 000 $</span><a class="object-preview__more" data-popup="popup" href="#modal"><img src="img/icon-button.svg" alt="/"/></a></div>
+                    </div>
+                  </div>
+                  <div class="object-preview swiper-slide"> <img class="object-preview__img" src="img/object-1.png" alt="/"/>
+                    <div class="object-preview__info">
+                      <h6 class="object-preview__name">Проект жилого комплекса в Сочи</h6>
+                      <div class="object-preview__datas"> 
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-marker.svg" alt="/"/><span class="object-preview__val">Алания, Мерсине</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-square.svg" alt="/"/><span class="object-preview__val">от 70 м2</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-home.svg" alt="/"/><span class="object-preview__val">Апартаменты</span></div>
+                        <div class="object-preview__data"> <img class="object-preview__icon" src="img/icon-calendar.svg" alt="/"/><span class="object-preview__val">2024</span></div>
+                      </div>
+                      <div class="object-preview__price"> <span>от 200 000 $</span><a class="object-preview__more" data-popup="popup" href="#modal"><img src="img/icon-button.svg" alt="/"/></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="next-slide"> <img src="img/slider-arrow.svg" alt="/"/></button>
+              <button class="objects__more">Показать больше</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <dialog class="popup"></dialog>
+    <dialog class="popup popup-form" id="modal-form">
+      <div class="popup-form__inner">
+        <button class="popup__close js-popupClose"> <img src="img/icon-close.svg" alt="/"/></button>
+        <div class="popup__body">
+          <div class="popup-form__title">Форма заказа</div>
+          <div class="popup-form__tagtitle">Заполните форму ниже и мы свяжемся с <b>вами в ближайшее время</b></div>
+          <form action="">
+            <input class="form__input" type="text" placeholder="Как вас зовут ?"/>
+            <input class="form__input js-maskPhone" type="text" placeholder="Ваш номер телефона"/>
+            <button class="form__button" data-popup="popup" data-src="#modal-thanks">Оформить заявку</button>
+            <label class="form__agree"> 
+              <input type="checkbox" checked="checked"/><span>Нажимая на кнопку, вы соглашаетесь с <br/> <a class="font-gold" href="/">политикой конфиденциальности</a>  </span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <dialog class="popup popup-thanks" id="modal-thanks">
+      <div class="popup-thanks__inner">
+        <button class="popup__close js-popupClose"> <img src="img/icon-close.svg" alt="/"/></button>
+        <div class="popup__body"><img class="popup-thanks__icon" src="img/icon-thanks.svg" alt="/"/>
+          <div class="popup-thanks__title">Спасибо!!!</div>
+          <div class="popup-thanks__text">Вы успешно заполнили форму и наши менеджеры дерутся за право <b>вам позвонить</b></div>
+          <button class="popup-thanks__button js-popupClose">Спасибо</button>
+        </div>
+      </div>
+    </dialog>
+    <!-- ======================================== ADVANTAGES-->
+    <section class="advantages" id="advantages"> 
+      <div class="container"> 
+        <h4 class="section-title advantages__title"><b>Почему</b> комфортно жить в Мерсине?</h4>
+        <div class="advantages__box"> 
+          <article class="advantage"><span class="advantage__quest">почему</span>
+            <div class="advantage__num">01</div><img class="advantage__img" src="img/advantage-1.png" alt="/"/>
+            <h6 class="advantage__title">Климат</h6>
+            <p class="advantage__text">Мерсин — один из самых теплых <br> курортов турецкого Средиземноморья, <br> летом средняя температура +34°C, зимой <br> +16°C. Курортный сезон начинается в <br> конце марта и длится до конца ноября</p>
+          </article>
+          <article class="advantage"><span class="advantage__quest">почему</span>
+            <div class="advantage__num">02</div><img class="advantage__img" src="img/advantage-2.png" alt="/"/>
+            <h6 class="advantage__title">Цены</h6>
+            <p class="advantage__text">Продукты в Мерсине дешевле, чем в <br> России и на других курортах Турции. <br> Проезд в транспорте стоит около 0,5 <br> центов, такси обойдется в 4-5 долларов. <br> Аренда машины стоит ~30 долларов в сутки</p>
+          </article>
+          <article class="advantage"><span class="advantage__quest">почему</span>
+            <div class="advantage__num">03</div><img class="advantage__img" src="img/advantage-3.png" alt="/"/>
+            <h6 class="advantage__title">Инфраструктура</h6>
+            <p class="advantage__text">На территории ЖК располагаются <br> бассейны и аквапарки, открытая <br> и закрытая парковки, фитнес залы, <br> хаммам, сауна, мини-клубы для детей, <br> беседки барбекю</p>
+          </article>
+          <article class="advantage"><span class="advantage__quest">почему</span>
+            <div class="advantage__num">04</div><img class="advantage__img" src="img/advantage-4.png" alt="/"/>
+            <h6 class="advantage__title">Пляжи</h6>
+            <p class="advantage__text">Мерсин простирается вдоль <br> Средиземного моря на 321 км, из которых <br> 108 км - это естественные пляжи со <br> статусом Голубого флага. Курорт считается <br> идеальным местом для дайвинга</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ======================================== GUARANTEE-->
+    <section class="guarantee" id="guarantee"> 
+      <div class="container"> 
+        <h5 class="section-title guarantee__title"> <b>Мы даем гарантии</b></h5>
+        <div class="guarantee__box">
+          <article class="guarantee-item"> <span class="guarantee-item__num">01</span>
+            <h6 class="guarantee-item__title">Удобный сервис</h6>
+            <p class="guarantee-item__text">Сопровождение нашими специалистами на протяжении всего срока сделки. Постпродажное сопровождение вашей недвижимости</p>
+          </article>
+          <article class="guarantee-item"> <span class="guarantee-item__num">02</span>
+            <h6 class="guarantee-item__title">Сэкономьте деньги</h6>
+            <p class="guarantee-item__text">Беспроцентная рассрочка на весь период строительства вашего комплекса. Минимальные первоначальные взносы</p>
+          </article>
+          <article class="guarantee-item"> <span class="guarantee-item__num">03</span>
+            <h6 class="guarantee-item__title">Удобство покупки</h6>
+            <p class="guarantee-item__text">Удобные графики платежей. презентация и покупка в режиме “онлайн”. Эксклюзивные, закрытые продажи на стадии котлована</p>
+          </article>
+          <article class="guarantee-item"> <span class="guarantee-item__num">04</span>
+            <h6 class="guarantee-item__title">Удачное инвестирование</h6>
+            <p class="guarantee-item__text">Консультации по выгодному инвестированию для перепродажи, аренды или жизни</p>
+          </article>
+        </div>
+        <div class="statistics"> 
+          <div class="statistics__item">
+            <div class="statistics__num">1 500</div>
+            <p class="statistics__val">Объектов</p>
+          </div>
+          <div class="statistics__item">
+            <div class="statistics__num">450</div>
+            <p class="statistics__val">Довольных <br> покупателей</p>
+          </div>
+          <div class="statistics__item">
+            <div class="statistics__num">75</div>
+            <p class="statistics__val">Объектов <br> в управлении</p>
+          </div>
+          <div class="statistics__item">
+            <div class="statistics__num">20</div>
+            <p class="statistics__val">Партнеров <br> в регионах</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======================================== RECORD-->
+    <section class="record" id="record"> 
+      <div class="container"> 
+        <h6 class="section-title record__title"><b>Тур</b> по объектам</h6>
+        <p class="record__tagtitle">Посмотрите доступные проекты, оцените качество выполненных работ и отделки, узнайте окончательную стоимость</p>
+        <div class="record__box">
+          <div class="record__info">
+            <div class="record__innertitle">Вы получите:</div>
+            <ul class="record__list"> 
+              <li class="record__item"><b>Трансфер</b> из аэропорта <br> до места проживания</li>
+              <li class="record__item"><b>Осмотр</b> объектов <br> недвижимости</li>
+              <li class="record__item"><b>Сопровождение</b> и консультация <br> эксперта на протяжении всего тура</li>
+              <li class="record__item"><b>Бесплатная</b> консультация юриста</li>
+              <li class="record__item"><b>Обзорная</b> экскурсия районов</li>
+            </ul>
+          </div>
+          <div class="record-form">
+            <div class="record-form__title"><b>Запишитесь на встречу</b> <br/> мы свяжемся с вами в ближайшее время</div>
+            <form class="form" action="">
+              <input class="form__input" type="text" placeholder="Как вас зовут ?"/>
+              <input class="form__input js-maskPhone" type="text" placeholder="Ваш номер телефона"/>
+              <button class="form__button">Записаться на тур по объектам</button>
+              <label class="form__agree"> 
+                <input type="checkbox" checked="checked"/><span>Нажимая на кнопку, вы соглашаетесь с <br/> <a class="font-gold" href="/">политикой конфиденциальности</a>  </span>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======================================== STEPS-->
+    <section class="steps" id="steps"> 
+      <div class="container"> 
+        <h6 class="section-title steps__title"> <b>Этапы покупки</b></h6>
+        <div class="steps__slider swiper"> 
+          <div class="swiper-wrapper"> 
+            <article class="step swiper-slide"> 
+              <div class="step__num">01</div>
+              <h6 class="step__title">Ознакомительный тур</h6>
+              <p class="step__text text">Тур можно провести как онлайн, так и очно. Мы встретим вас в аэропорту, предоставим трансфер, познакомим с городом и интересующими объектами недвижимости</p>
+              <button class="step__button button" data-popup="popup" data-src="#modal-form">Записаться на онлайн-тур</button>
+            </article>
+            <article class="step swiper-slide"> 
+              <div class="step__num">02</div><img class="step__img" src="img/step-2.png" alt=""/>
+              <h6 class="step__title">Выбор объекта и варианта оплаты</h6>
+              <p class="step__text text">Застройщиком предоставляется беспроцентная рассрочка с первоначальным взносом 50%</p>
+            </article>
+            <article class="step swiper-slide"> 
+              <div class="step__num">03</div><img class="step__img" src="img/step-3.png" alt=""/>
+              <h6 class="step__title">Подписание договора</h6>
+              <p class="step__text text">В договоре между компанией застройщика и покупателем прописываются все условия покупки</p>
+            </article>
+            <article class="step swiper-slide"> 
+              <div class="step__num">04</div><img class="step__img" src="img/step-4.png" alt=""/>
+              <h6 class="step__title">Оплата договора</h6>
+              <p class="step__text text">Оплата производится согласно условиям договора через банковский перевод на счет застройщика</p>
+            </article>
+            <article class="step swiper-slide"> 
+              <div class="step__num">05</div><img class="step__img" src="img/step-5.png" alt=""/>
+              <h6 class="step__title">Получение ИНН</h6>
+              <p class="step__text text">При покупки недвижимости вам потребуется получить индивидуальный налоговый номер на территории Турции</p>
+            </article>
+            <article class="step swiper-slide"> 
+              <div class="step__num">06</div><img class="step__img" src="img/step-6.png" alt=""/>
+              <h6 class="step__title">Оформление собственности</h6>
+              <p class="step__text text">При покупке недвижимости вы получаете ИНН и получаете документ на собственность (ТАПУ)</p>
+            </article>
+            <article class="step swiper-slide"> 
+              <div class="step__num">07</div><img class="step__img" src="img/step-7.png" alt=""/>
+              <h6 class="step__title">Внесение первого взноса</h6>
+              <p class="step__text text">Оплата производится на расчетный счет застройщика согласно договору</p>
+            </article>
+            <article class="step swiper-slide"> 
+              <div class="step__num">08</div><img class="step__img" src="img/step-8.png" alt=""/>
+              <h6 class="step__title">Финальный этап - получение ВНЖ</h6>
+              <p class="step__text text">Оформление техпаспорта Искан на предоставление коммунальных услуг и получение ВНЖ</p>
+            </article>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- ======================================== REVIEWS-->
+    <section class="reviews" id="reviews"> 
+      <div class="container"> 
+        <h6 class="section-title reviews__title"><b>Что пишут о нас клиенты,</b> которые <br/> уже доверили нам покупку недвижимости</h6>
+        <div class="reviews__slider swiper"> 
+          <div class="swiper-wrapper"> 
+            <div class="review swiper-slide">
+              <div class="review__author"> <img class="review__ava" src="img/avatar-1.png" alt="/"/>
+                <h6 class="review__name">Василий Иванов</h6>
+              </div>
+              <p class="review__text">Уже установили три окна этой компании. Замеры производит сам директор. Цена вполне доступная. Все исполнено в срок! Качество устраивает на 100% Отдельное Спасибо монтажнику Денису и его напарнику ! Достоин поощрения ! Демонтаж старых деревянных окон произвели бережно. Монтаж новых сделали быстро, качественно! Будем рекомендовать вашу компанию!</p>
+              <button class="review__button">Читать отзыв полностью</button>
+            </div>
+            <div class="review swiper-slide">
+              <div class="review__author"> <img class="review__ava" src="img/avatar-2.png" alt="/"/>
+                <h6 class="review__name">Антон Валентов</h6>
+              </div>
+              <p class="review__text">Уже установили три окна этой компании. Замеры производит сам директор. Цена вполне доступная. Все исполнено в срок! Качество устраивает на 100% Отдельное Спасибо монтажнику Денису и его напарнику ! Достоин поощрения ! Демонтаж старых деревянных окон произвели бережно. Монтаж новых сделали быстро, качественно! Будем рекомендовать вашу компанию!</p>
+              <button class="review__button">Читать отзыв полностью</button>
+            </div>
+            <div class="review swiper-slide">
+              <div class="review__author"> <img class="review__ava" src="img/avatar-3.png" alt="/"/>
+                <h6 class="review__name">Анатолий Куратов</h6>
+              </div>
+              <p class="review__text">Уже установили три окна этой компании. Замеры производит сам директор. Цена вполне доступная. Все исполнено в срок! Качество устраивает на 100% Отдельное Спасибо монтажнику Денису и его напарнику ! Достоин поощрения ! Демонтаж старых деревянных окон произвели бережно. Монтаж новых сделали быстро, качественно! Будем рекомендовать вашу компанию!</p>
+              <button class="review__button">Читать отзыв полностью</button>
+            </div>
+            <div class="review swiper-slide">
+              <div class="review__author"> <img class="review__ava" src="img/avatar-3.png" alt="/"/>
+                <h6 class="review__name">Анатолий Куратов</h6>
+              </div>
+              <p class="review__text">Уже установили три окна этой компании. Замеры производит сам директор. Цена вполне доступная. Все исполнено в срок! Качество устраивает на 100% Отдельное Спасибо монтажнику Денису и его напарнику ! Достоин поощрения ! Демонтаж старых деревянных окон произвели бережно. Монтаж новых сделали быстро, качественно! Будем рекомендовать вашу компанию!</p>
+              <button class="review__button">Читать отзыв полностью</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- ======================================== APPLICATION-->
+    <section class="application" id="application"> 
+      <div class="container"> 
+        <div class="application__box"> 
+          <div class="application__info"> 
+            <div class="application__innertitle"><b>Оформите заявку</b> <br/> и начните поиск заявку</div>
+            <ul class="application__list"> 
+              <li class="application__item"><span class="application__num">01</span><b>Выясним</b> ваши предпочтения <br> в недвижимости</li>
+              <li class="application__item"><span class="application__num">02</span><b>Расскажем</b> об особенностях <br> недвижимости в Турции</li>
+              <li class="application__item"><span class="application__num">03</span><b>Сделаем</b> предварительный <br> подбор по ценовому сегменту</li>
+              <li class="application__item"><span class="application__num">04</span><b>Пригласим</b> в Турцию для <br> просмотра объекта </li>
+              <li class="application__item"><span class="application__num">05</span><b>Уточним</b> в какие сроки вы <br> хотите прилететь и совершить покупку</li>
+            </ul>
+          </div>
+          <div class="application-form"> 
+            <div class="application-form__title"><b class="font-gold">Не откладывай</b> <br/> покупку недвижимости <br/> в ожидании снижения цен</div>
+            <form class="form" action="">
+              <input class="form__input" type="text" placeholder="Как вас зовут ?"/>
+              <input class="form__input js-maskPhone" type="text" placeholder="Ваш номер телефона"/>
+              <button class="form__button">Оформить заявку</button>
+              <label class="form__agree"> 
+                <input type="checkbox" checked="checked"/><span>Нажимая на кнопку, вы соглашаетесь с <br/> <a class="font-gold" href="/">политикой конфиденциальности</a> </span>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======================================== FAQ-->
+    <section class="faq" id="faq"> 
+      <div class="container"> 
+        <h6 class="faq__title section-title"><b>Ответы</b> на часто задаваемые вопросы</h6>
+        <div class="faq__box"> 
+          <div class="accordeon">
+            <div class="accordeon__box">
+              <div class="accordeon__item">
+                <div class="accordeon__header"> 
+                  <p>Могу ли я получить ВНЖ или Гражданство Турции? <img src="img/icon-arrow.svg" alt="/"/></p>
+                </div>
+                <div class="accordeon__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nam consequatur magnam molestiae architecto rerum, non voluptatum magni pariatur in vel dolore accusantium reiciendis omnis, eveniet ipsa laboriosam quidem fugit?</div>
+              </div>
+              <div class="accordeon__item">
+                <div class="accordeon__header"> 
+                  <p>Что дает мне ВНЖ? <img src="img/icon-arrow.svg" alt="/"/></p>
+                </div>
+                <div class="accordeon__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nam consequatur magnam molestiae architecto rerum, non voluptatum magni pariatur in vel dolore accusantium reiciendis omnis, eveniet ipsa laboriosam quidem fugit?</div>
+              </div>
+              <div class="accordeon__item">
+                <div class="accordeon__header"> 
+                  <p>Могу ли я устроится на работу при наличии ВНЖ? <img src="img/icon-arrow.svg" alt="/"/></p>
+                </div>
+                <div class="accordeon__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nam consequatur magnam molestiae architecto rerum, non voluptatum magni pariatur in vel dolore accusantium reiciendis omnis, eveniet ipsa laboriosam quidem fugit?</div>
+              </div>
+              <div class="accordeon__item">
+                <div class="accordeon__header"> 
+                  <p>Какие налоги я буду оплачивать при покупке <br> и продаже недвижимости? <img src="img/icon-arrow.svg" alt="/"/></p>
+                </div>
+                <div class="accordeon__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nam consequatur magnam molestiae architecto rerum, non voluptatum magni pariatur in vel dolore accusantium reiciendis omnis, eveniet ipsa laboriosam quidem fugit?</div>
+              </div>
+            </div>
+            <div class="accordeon__box">
+              <div class="accordeon__item">
+                <div class="accordeon__header"> 
+                  <p>Сколько стоят коммунальные услуги? <img src="img/icon-arrow.svg" alt="/"/></p>
+                </div>
+                <div class="accordeon__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nam consequatur magnam molestiae architecto rerum, non voluptatum magni pariatur in vel dolore accusantium reiciendis omnis, eveniet ipsa laboriosam quidem fugit?</div>
+              </div>
+              <div class="accordeon__item">
+                <div class="accordeon__header"> 
+                  <p>Почему реальная площадь недвижимости <br> не соответствует документам? <img src="img/icon-arrow.svg" alt="/"/></p>
+                </div>
+                <div class="accordeon__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nam consequatur magnam molestiae architecto rerum, non voluptatum magni pariatur in vel dolore accusantium reiciendis omnis, eveniet ipsa laboriosam quidem fugit?</div>
+              </div>
+              <div class="accordeon__item">
+                <div class="accordeon__header"> 
+                  <p>Сохранится ли моя пенсия при переезде на ПМЖ в Турцию? <img src="img/icon-arrow.svg" alt="/"/></p>
+                </div>
+                <div class="accordeon__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nam consequatur magnam molestiae architecto rerum, non voluptatum magni pariatur in vel dolore accusantium reiciendis omnis, eveniet ipsa laboriosam quidem fugit?</div>
+              </div>
+              <div class="accordeon__item">
+                <div class="accordeon__header"> 
+                  <p>Какие расходы я понесу при оформлении <br> приобретенной недвижимости? <img src="img/icon-arrow.svg" alt="/"/></p>
+                </div>
+                <div class="accordeon__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nam consequatur magnam molestiae architecto rerum, non voluptatum magni pariatur in vel dolore accusantium reiciendis omnis, eveniet ipsa laboriosam quidem fugit?</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======================================== ABOUT-->
+    <section class="about" id="about"> 
+      <div class="container"> 
+        <div class="about__box">
+          <div class="about__content"> 
+            <h6 class="about__title section-title">Привет, <br/> <b>я Макс Орлов</b></h6>
+            <p class="about__text">Несколько лет назад я переехал жить в Турцию. За много лет я очень хорошо изучил эту страну и ее районы, поэтому смогу помочь тебе с подбором и выбором лучшего предложения для покупки недвижимости.</p>
+            <p class="about__text">Несколько лет назад я переехал жить в Турцию. За много лет я очень хорошо изучил эту страну и ее районы, поэтому смогу помочь тебе с подбором и выбором лучшего предложения для покупки недвижимости.</p>
+            <p class="about__text">Несколько лет назад я переехал жить в Турцию. За много лет я очень хорошо изучил эту страну и ее районы, поэтому смогу помочь тебе с подбором и выбором лучшего предложения для покупки недвижимости.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======================================== CONTACTS-->
+    <section class="contacts" id="contacts"> 
+      <div class="container"> 
+        <div class="contacts__box"> 
+          <div class="contacts-data"> 
+            <h6 class="contacts-data__title section-title">Наши <br/> <b>контакты</b></h6>
+            <div class="contacts-data__item">
+              <div class="contacts-data__name">Телефон</div><a class="contacts-data__phone" href="tel:+905538996930">+90 (553) 899-69-30</a><br/><a class="contacts-data__phone" href="tel:+79057609610">+7 (905) 760-96-10</a>
+            </div>
+            <div class="contacts-data__item"> 
+              <div class="contacts-data__name">Почта</div><a class="contacts-data__mail" href="mailto:alanya.ihouse@gmail.com">alanya.ihouse@gmail.com</a>
+            </div>
+            <div class="contacts-data__item"> 
+              <div class="contacts-data__name">Адрес</div><span class="contacts-data__adress">Mahmutlar mah. <br/> Sarihasanli cad. A88</span>
+            </div>
+            <div class="contacts-data__item"> 
+              <div class="contacts-data__name">Соц. сети</div>
+              <div class="contacts-data__feedback"> <a href="/"> <img src="img/icon-telegram.svg" alt="/"/></a><a href="/">
+                  <svg class="whatsapp-icon" id="whatsapp" width="23" height="23" fill-rule="evenodd" clip-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 512 512">
+                    <path class="whatsapp-icon__bg" fill="#979A9E" d="M256 0c141.39,0 256,114.61 256,256 0,141.39 -114.61,256 -256,256 -141.39,0 -256,-114.61 -256,-256 0,-141.39 114.61,-256 256,-256z"></path>
+                    <path class="whatsapp-icon__figure" fill="#363A40" d="M256 373.82c-20.85,0 -41.37,-5.55 -59.32,-16.04 -2.89,-1.69 -6.37,-2.14 -9.6,-1.26l-39.03 10.71 13.6 -29.95c1.85,-4.07 1.37,-8.82 -1.24,-12.45 -14.55,-20.15 -22.23,-43.96 -22.23,-68.83 0,-64.97 52.85,-117.82 117.82,-117.82 64.97,0 117.82,52.85 117.82,117.82 0,64.97 -52.85,117.82 -117.82,117.82zm0 -260.58c-78.72,0 -142.75,64.04 -142.75,142.76 0,27.69 7.85,54.28 22.8,77.36l-21.69 47.77c-2,4.41 -1.27,9.57 1.86,13.25 2.41,2.81 5.9,4.38 9.49,4.38 8.04,0 51.89,-13.78 63.05,-16.85 20.63,11.04 43.76,16.85 67.24,16.85 78.71,0 142.76,-64.05 142.76,-142.76 0,-78.72 -64.05,-142.75 -142.76,-142.76z"></path>
+                    <path class="whatsapp-icon__figure" fill="#363A40" d="M290.08 272.69c-5.4,2.21 -8.85,10.67 -12.35,14.99 -1.8,2.21 -3.94,2.56 -6.7,1.45 -20.28,-8.08 -35.83,-21.62 -47.02,-40.28 -1.9,-2.89 -1.56,-5.18 0.73,-7.87 3.38,-3.98 7.63,-8.5 8.54,-13.87 2.03,-11.86 -13.48,-48.67 -33.97,-31.99 -58.95,48.04 98.34,175.45 126.73,106.54 8.03,-19.54 -27,-32.64 -35.96,-28.97z"> </path>
+                  </svg></a></div>
+            </div>
+          </div>
+          <div class="contacts__map" id="map"></div>
+        </div>
+      </div>
+    </section>
+    <!-- ======================================== FOOTER-->
+    <footer class="footer"> 
+      <div class="container"> 
+        <div class="footer__box"> <a class="footer__link" href="/">Пользовательские соглашения </a><a class="footer__link" href="/">Политика конфиденциальности</a>
+          <div class="dev"> 
+            <p class="dev__text">Создание сайта</p><a href="https://scrum360.ru/">	<img src="img/scrum-logo.png" alt="/"/></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ======================================== SCRIPTS-->
+    <!-- jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- inputmask -->
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/5.x/dist/jquery.inputmask.js"></script>
+    <!-- slick slider -->
+    <!-- script(src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")-->
+    <!-- swiper slider-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- yandex map-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+    <!-- scripts-->
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+:root{
+	--color-gold: #BE915A;
+	--color-white: #FFF;
+	--color-black: #000;
+	--color-black-blue: #171920;
+	--color-black-gray: #242223;
+}
+
+@mixin button($width, $height, $font-size){
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	width: $width;
+	height: $height;
+	font-size: $font-size;
+	font-weight: 600;
+	color: var(--color-white);
+	border-radius: 100px;
+	background: var(--color-gold);
+	cursor: pointer;
+	@media(max-width: 620px) {
+		width: 100%;
+	}
+}

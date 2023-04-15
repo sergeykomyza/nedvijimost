@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Site | Templates
+	body
+		//- mixins
+		include ./../mixins/_mixin1.pug
+		include ./../mixins/_mixin2.pug
+		include ./../mixins/_mixin3.pug
+		include ./../mixins/_mixin4.pug
+		include ./../mixins/_mixin5.pug
+
+		include ./../sections/_header.pug
+
+		.templates
+			h1 Шаблоны
+			br
+			br
+			input.form__input(type="text" placeholder="Как вас зовут ?")
+			input.form__input.js-maskPhone(type="text" placeholder="Ваш номер телефона")
+			button.form__button Оформить заявку
+			label.form__agree 
+				input(type="checkbox" checked)
+				span Нажимая на кнопку, вы соглашаетесь с #[br] #[a(href="/" class="font-gold") политикой конфиденциальности] 
+			br
+			br
+			.object-preview 
+				img.object-preview__img(src="img/object-1.png", alt="/")
+				.object-preview__info
+					h6.object-preview__name Уникальный комплекс класса люкс в районе Мерсине
+					.object-preview__datas 
+						.object-preview__data 
+							img.object-preview__icon(src="img/icon-marker.svg", alt="/")
+							span.object-preview__val Алания, Мерсине
+						.object-preview__data 
+							img.object-preview__icon(src="img/icon-square.svg", alt="/")
+							span.object-preview__val от 70 м2
+						.object-preview__data 
+							img.object-preview__icon(src="img/icon-home.svg", alt="/")
+							span.object-preview__val Апартаменты
+						.object-preview__data 
+							img.object-preview__icon(src="img/icon-calendar.svg", alt="/")
+							span.object-preview__val 2024
+					.object-preview__price 
+						span от 200 000 $
+						a.object-preview__more(data-popup='gallery' href="#modal")
+							img(src="img/icon-button.svg", alt="/")
+
+
+		// ======================================== FOOTER
+		include ./../sections/_footer.pug
+		// ======================================== SCRIPTS
+		include ./../sections/_scripts.pug 

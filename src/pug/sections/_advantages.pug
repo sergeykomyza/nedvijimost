@@ -1,0 +1,20 @@
+-
+	const advantages = [
+		{img: 'advantage-1.png', title: 'Климат',         text: 'Мерсин — один из самых теплых <br> курортов турецкого Средиземноморья, <br> летом средняя температура +34°C, зимой <br> +16°C. Курортный сезон начинается в <br> конце марта и длится до конца ноября'},
+		{img: 'advantage-2.png', title: 'Цены',           text: 'Продукты в Мерсине дешевле, чем в <br> России и на других курортах Турции. <br> Проезд в транспорте стоит около 0,5 <br> центов, такси обойдется в 4-5 долларов. <br> Аренда машины стоит ~30 долларов в сутки'},
+		{img: 'advantage-3.png', title: 'Инфраструктура', text: 'На территории ЖК располагаются <br> бассейны и аквапарки, открытая <br> и закрытая парковки, фитнес залы, <br> хаммам, сауна, мини-клубы для детей, <br> беседки барбекю'},
+		{img: 'advantage-4.png', title: 'Пляжи',          text: 'Мерсин простирается вдоль <br> Средиземного моря на 321 км, из которых <br> 108 км - это естественные пляжи со <br> статусом Голубого флага. Курорт считается <br> идеальным местом для дайвинга'}
+	]
+
+section#advantages.advantages 
+	.container 
+		h4.section-title.advantages__title #[b Почему] комфортно жить в Мерсине?
+		.advantages__box 
+			each item, i in advantages
+				article.advantage
+					span.advantage__quest почему
+					.advantage__num= `0${i+1}`
+					img.advantage__img(src="img/" + item.img, alt="/")
+					h6.advantage__title= item.title
+					p.advantage__text !{item.text}
+

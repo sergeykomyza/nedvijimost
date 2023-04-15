@@ -1,0 +1,19 @@
+section#record.record 
+	.container 
+		h6.section-title.record__title #[b Тур] по объектам
+		p.record__tagtitle Посмотрите доступные проекты, оцените качество выполненных работ и отделки, узнайте окончательную стоимость
+		.record__box
+			.record__info
+				.record__innertitle Вы получите:
+				ul.record__list 
+					each item in ['<b>Трансфер</b> из аэропорта <br> до места проживания','<b>Осмотр</b> объектов <br> недвижимости','<b>Сопровождение</b> и консультация <br> эксперта на протяжении всего тура','<b>Бесплатная</b> консультация юриста','<b>Обзорная</b> экскурсия районов']
+						li.record__item !{item}
+			.record-form
+				.record-form__title #[b Запишитесь на встречу] #[br] мы свяжемся с вами в ближайшее время
+				form.form(action="")
+					input.form__input(type="text" placeholder="Как вас зовут ?")
+					input.form__input.js-maskPhone(type="text" placeholder="Ваш номер телефона")
+					button.form__button Записаться на тур по объектам
+					label.form__agree 
+						input(type="checkbox" checked)
+						span Нажимая на кнопку, вы соглашаетесь с #[br] #[a(href="/" class="font-gold") политикой конфиденциальности]  

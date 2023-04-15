@@ -1,0 +1,25 @@
+
+dialog.popup.popup-form#modal-form
+	.popup-form__inner
+		button.popup__close.js-popupClose 
+			img(src="img/icon-close.svg", alt="/")
+		.popup__body
+			.popup-form__title Форма заказа
+			.popup-form__tagtitle Заполните форму ниже и мы свяжемся с #[b вами в ближайшее время]
+			form(action="")
+				input.form__input(type="text" placeholder="Как вас зовут ?")
+				input.form__input.js-maskPhone(type="text" placeholder="Ваш номер телефона")
+				button.form__button(data-popup="popup" data-src="#modal-thanks") Оформить заявку
+				label.form__agree 
+					input(type="checkbox" checked)
+					span Нажимая на кнопку, вы соглашаетесь с #[br] #[a(href="/" class="font-gold") политикой конфиденциальности]  
+
+dialog.popup.popup-thanks#modal-thanks
+	.popup-thanks__inner
+		button.popup__close.js-popupClose 
+			img(src="img/icon-close.svg", alt="/")
+		.popup__body
+			img.popup-thanks__icon(src="img/icon-thanks.svg", alt="/")
+			.popup-thanks__title Спасибо!!!
+			.popup-thanks__text Вы успешно заполнили форму и наши менеджеры дерутся за право #[b вам позвонить]
+			button.popup-thanks__button.js-popupClose Спасибо

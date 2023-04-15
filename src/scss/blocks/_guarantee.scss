@@ -1,0 +1,77 @@
+.guarantee{
+	padding-top: 47px;
+	background: url('../img/bg-guaranty.jpg') center center/cover no-repeat;
+	&__title{
+		margin-bottom: 25px;
+	}
+	&__box{
+		display: grid;
+		grid-template-columns: repeat(2, 285px);
+		gap: 28px 85px;
+		margin-bottom: 50px;
+		padding-left: 57px;
+		@media(max-width: 768px){
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
+.guarantee-item{
+	position: relative;
+	&__title{
+		margin-bottom: 8px;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 27px;
+		color: var(--color-black-blue);
+	}
+	&__text{
+		line-height: 19px;
+	}
+	&__num{
+		position: absolute;
+		top: 5px;
+		left: -35px;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 19px;
+		color: var(--color-gold);
+	}
+}
+
+.statistics{
+	display: flex;
+	@media(max-width: 768px){
+		flex-direction: column;
+	}
+	&__item{
+		border-right: 1px solid rgba(0,0,0,0.25);
+		&:nth-child(1){
+			padding: 16px 53px 48px 20px;
+		}
+		&:nth-child(2){
+			padding: 16px 58px 48px 50px;
+		}
+		&:nth-child(3){
+			padding: 16px 53px 48px 48px;
+		}
+		&:nth-child(4){
+			padding: 16px 67px 48px 50px;
+		}
+		@media(max-width: 768px){
+			padding: 15px !important;
+			border-right: 0;
+			border-bottom: 1px solid rgba(0,0,0,0.25);
+			text-align: center;
+		}
+	}
+	&__num{
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 41px;
+		color: var(--color-gold);
+	}
+	&__val{
+		font-size: 12px;
+		line-height: 16px;
+	}
+}
