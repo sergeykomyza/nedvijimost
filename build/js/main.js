@@ -392,7 +392,7 @@ const objects = () => {
     })
     
     let xhr = new XMLHttpRequest()
-    xhr.open('GET', "../img/objects.json")
+    xhr.open('GET', "https://sergeykomyza.github.io/nedvijimost/build/img/objects.json")
     xhr.send()
     xhr.onload = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
