@@ -10,6 +10,7 @@
 		background: url('../img/bg-about.png') left center/contain no-repeat;
 		overflow: hidden;
 		@media(max-width: 992px){
+			height: auto;
 			padding: 15px;
 			background: url('../img/bg-about.png') left center/cover no-repeat;
 		}

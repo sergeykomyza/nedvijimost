@@ -14,6 +14,7 @@ h1,h2,h3,h4,h5,h6{
 	margin: 0;
 	padding: 0;
 	line-height: normal;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 html{ 
 	overflow-x: hidden;
@@ -26,6 +27,7 @@ body{
 	font-size: 14px;
 	font-weight: 300;
 	color: var(--color-black);
+	overflow-x: hidden;
 }
 ul{
 	margin: 0;

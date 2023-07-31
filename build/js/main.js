@@ -56,7 +56,7 @@ const swiper = new Swiper('.objects__slider', {
 const swiper2 = new Swiper('.steps__slider', {
     loop: false,
     slidesPerView: 1,
-    
+    spaceBetween: 30,
     // If we need pagination
     pagination: {
         el: '.steps .swiper-pagination',
@@ -65,12 +65,10 @@ const swiper2 = new Swiper('.steps__slider', {
     breakpoints: {
         // when window width is >= 480px
         769: {
-            spaceBetween: 30,
           slidesPerView: 2
         },
         // when window width is >= 640px
         993: {
-            spaceBetween: 30,
           slidesPerView: 4
         }
     }
@@ -108,10 +106,12 @@ const headerScroll = () => {
     const header = document.querySelector('.header')
     // СКРОЛЛ К НУЖНОЙ СЕКЦИИ ПО КЛИКУ НА ПУНКТАХ МЕНЮ
     $('.menu__link').click(function () {
+        document.querySelector('.header').classList.remove('active')
+        document.querySelector('.js-mMenuToggle').classList.remove('active')
         header.classList.remove('scroll')
         var scroll_elem = $(this).attr('href');
         $('html, body').animate({
-            scrollTop: $(scroll_elem).offset().top - 100
+            scrollTop: $(scroll_elem).offset().top - 140
         }, 1000);
     });
     // ДОБАВЛЯЕМ АКТИВНЫЙ КЛАСС ШАПКЕ
@@ -257,40 +257,46 @@ showContent(0); // в скобках указываем индекс таба, �
 }
 
 // ================================================== 
+
+
 const accordeons = (accordeonSelector) => {
     const accordeon = document.querySelector(accordeonSelector)
 
     const accItem = accordeon.querySelectorAll('.accordeon__item')
 
-    accItem.forEach( item => { 
-        const accHeader = item.querySelector('.accordeon__header')
-        item.style.height = accHeader.scrollHeight + "px"
-        item.className = 'accordeon__item closed'
-        item.addEventListener('click', toggle) 
+    accItem.forEach( item => { // перебираем все блоки аккордеона
+    const accHeader = item.querySelector('.accordeon__header') // заголовок одного блока
+    item.style.height = accHeader.scrollHeight + "px" // делаем высоту всего блока равной заголовку блока, таким образом скрывая контент блока
+    item.className = 'accordeon__item closed' // присваиваем блоку класс closed
+    item.addEventListener('click', toggle) // вешаем на блок вызов функции по клику
     });
-
+    
     function toggle(e){
-        let target = e.target
-        e.preventDefault()
-        const thisClass = this.className
-        const itsAccHeader = target == this.querySelector('.accordeon__header') || this.querySelector('.accordeon__header').contains(target)
-        const accHeader = this.querySelector('.accordeon__header')
-        const accContent = this.querySelector('.accordeon__content')
-        
-        accItem.forEach( item => {
+    let target = e.target
+    e.preventDefault()
+    const thisClass = this.className
+    const itsAccHeader = target == this.querySelector('.accordeon__header') || this.querySelector('.accordeon__header').contains(target)
+    const accHeader = this.querySelector('.accordeon__header')
+    const accContent = this.querySelector('.accordeon__content')
+    
+    accItem.forEach( item => {
         const accHeader = item.querySelector('.accordeon__header')
         if(itsAccHeader){
-            item.style.height = accHeader.scrollHeight + "px"
-            item.className = 'accordeon__item closed'
+        item.style.height = accHeader.scrollHeight + "px"
+        item.className = 'accordeon__item closed'
         }
-        });
-        
-        if(thisClass == "accordeon__item closed"){
+    });
+    
+    if(thisClass == "accordeon__item closed"){
         this.className = "accordeon__item opened"
         this.style.height = (accHeader.scrollHeight + accContent.scrollHeight) + "px"
-        }
     }
+    }
+    
 }
+
+accordeons('.accordeon');
+
 
 // ================================================== 
 const objects = () => {
@@ -466,91 +472,49 @@ headerScroll()
 mMenuToggle()
 quiz()
 tabs('.tabs__buttons', '.tab', '.tabs__content ', 'active')
-accordeons('.accordeon')
 objects()
 popup()
 // ================================================== КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
-document.addEventListener('DOMContentLoaded', function () {
-    setTimeout(function() {
-        var headID = document.getElementsByTagName("body")[0];         
-        var newScript = document.createElement('script');
-        newScript.type = 'text/javascript';
-        newScript.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
-        headID.appendChild(newScript);
-    }, 3000);
-    setTimeout(function() {
-            var myMap = new ymaps.Map("map", {
-            center: [36.488592, 32.118670],
-            zoom: 17,
-            controls: ['smallMapDefaultSet']
-        }, {
-            searchControlProvider: 'yandex#search'
-        });
+// document.addEventListener('DOMContentLoaded', function () {
+//     setTimeout(function() {
+//         var headID = document.getElementsByTagName("body")[0];         
+//         var newScript = document.createElement('script');
+//         newScript.type = 'text/javascript';
+//         newScript.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+//         headID.appendChild(newScript);
+//     }, 3000);
+//     setTimeout(function() {
+//             var myMap = new ymaps.Map("map", {
+//             center: [36.488592, 32.118670],
+//             zoom: 17,
+//             controls: ['smallMapDefaultSet']
+//         }, {
+//             searchControlProvider: 'yandex#search'
+//         });
 
-        myGeoObject = new ymaps.GeoObject({
-            geometry: {
-                type: "Point"
-            },
-        });
-        myMap.geoObjects
-            .add(myGeoObject)
-            .add(new ymaps.Placemark([36.488592, 32.118670], {
-                balloonContent: '<strong></strong>',
-                iconCaption: 'Mahmutlar mah.Sarihasanli cad. A88'
-            }, {
-                preset: 'islands#blueCircleDotIconWithCaption',
-                iconCaptionMaxWidth: '200'
-            }));
+//         myGeoObject = new ymaps.GeoObject({
+//             geometry: {
+//                 type: "Point"
+//             },
+//         });
+//         myMap.geoObjects
+//             .add(myGeoObject)
+//             .add(new ymaps.Placemark([36.488592, 32.118670], {
+//                 balloonContent: '<strong></strong>',
+//                 iconCaption: 'Mahmutlar mah.Sarihasanli cad. A88'
+//             }, {
+//                 preset: 'islands#blueCircleDotIconWithCaption',
+//                 iconCaptionMaxWidth: '200'
+//             }));
 
-        myMap.setType('yandex#publicMap');
+//         myMap.setType('yandex#publicMap');
 
-        myMap.behaviors.disable('scrollZoom');
-        //на мобильных устройствах... (проверяем по userAgent браузера)
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            //... отключаем перетаскивание карты
-            myMap.behaviors.disable('drag');
-        }
-    }, 4000);
-});
+//         myMap.behaviors.disable('scrollZoom');
+//         //на мобильных устройствах... (проверяем по userAgent браузера)
+//         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+//             //... отключаем перетаскивание карты
+//             myMap.behaviors.disable('drag');
+//         }
+//     }, 4000);
+// });
 
-/* иногда карта не загружается таким образом (например в битриксе)
- тогда надо сделать обращение к ней как это указано в документации, через ymaps.ready - https://yandex.ru/dev/maps/jsapi/doc/2.1/quick-start/index.html?from=techmapsmain
-
-ymaps.ready(init);
-
-function init(){
-
-    var myMap = new ymaps.Map("map", {
-        center: [56.745981, 37.179787],
-        zoom: 13,
-        controls: ['smallMapDefaultSet']
-    }, {
-        searchControlProvider: 'yandex#search'
-    });
-
-    myGeoObject = new ymaps.GeoObject({
-        geometry: {
-            type: "Point"
-        },
-    });
-    myMap.geoObjects
-        .add(myGeoObject)
-        .add(new ymaps.Placemark([56.745981, 37.179787], {
-            balloonContent: '<strong></strong>',
-            iconCaption: 'М.О., г. Королев, ул. Ленина 12'
-        }, {
-            preset: 'islands#blueCircleDotIconWithCaption',
-            iconCaptionMaxWidth: '200'
-        }));
-
-    myMap.setType('yandex#publicMap');
-    // отключаем масштабирование скроллом       
-    myMap.behaviors.disable('scrollZoom');
-    // на мобильных устройствах... (проверяем по userAgent браузера)
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        //... отключаем перетаскивание карты
-        myMap.behaviors.disable('drag');
-    }
-        
-}
-*/
