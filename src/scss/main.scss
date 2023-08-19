@@ -96,6 +96,21 @@ section{
 	}
 }
 
+* {
+	::-webkit-scrollbar {
+		width: 6px; /* ширина всей полосы прокрутки */
+	}
+	::-webkit-scrollbar-track {
+		background: var(--grey2); /* цвет зоны отслеживания */
+		border-radius: 20px;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: var(--grey1); /* цвет бегунка */
+		border-radius: 20px; /* округлось бегунка */
+		border: 3px solid transparent;
+	}
+}
+
 // ======================================== TEMPLATES
 @import 'blocks/templates';
 // ======================================== HEADER
