@@ -1,31 +1,31 @@
 
 // ================================================== МАСКА ДЛЯ ИНПУТОВ (https://github.com/RobinHerbots/Inputmask)
-$(document).ready(function () {
-    $(".js-maskPhone").inputmask({
-        mask: "+7 999 999 99 99",
-        clearIncomplete: true
-    });
-    $('.email').inputmask({
-        mask: "*{1,20}[.*{1,20}]@*{1,20}.*{2,4}",
-        clearIncomplete: true
-    //     greedy: false,
-    //     onBeforePaste: function (pastedValue, opts) {
-    //         pastedValue = pastedValue.toLowerCase();
-    //         return pastedValue.replace("mailto:", "");
-    //     },
-    //     definitions: {
-    //         '*': {
-    //             validator: "[0-9A-Za-z-а-я-]",
-    //             casing: "lower"
-    //         }
-    //     }
-    });
-    $(".js-maskDate").inputmask({
-        mask: "99/99/9999",
-        clearIncomplete: true,
-        'placeholder': 'dd/mm/yyyy'
-    });
-});
+// $(document).ready(function () {
+//     $(".js-maskPhone").inputmask({
+//         mask: "+7 999 999 99 99",
+//         clearIncomplete: true
+//     });
+//     $('.email').inputmask({
+//         mask: "*{1,20}[.*{1,20}]@*{1,20}.*{2,4}",
+//         clearIncomplete: true
+//     //     greedy: false,
+//     //     onBeforePaste: function (pastedValue, opts) {
+//     //         pastedValue = pastedValue.toLowerCase();
+//     //         return pastedValue.replace("mailto:", "");
+//     //     },
+//     //     definitions: {
+//     //         '*': {
+//     //             validator: "[0-9A-Za-z-а-я-]",
+//     //             casing: "lower"
+//     //         }
+//     //     }
+//     });
+//     $(".js-maskDate").inputmask({
+//         mask: "99/99/9999",
+//         clearIncomplete: true,
+//         'placeholder': 'dd/mm/yyyy'
+//     });
+// });
 
 // ================================================== СЛАЙДЕР SWIPER (https://swiperjs.com/get-started) 
 const swiper = new Swiper('.objects__slider', {
@@ -475,46 +475,35 @@ tabs('.tabs__buttons', '.tab', '.tabs__content ', 'active')
 objects()
 popup()
 // ================================================== КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
-document.addEventListener('DOMContentLoaded', function () {
-    setTimeout(function() {
-        var headID = document.getElementsByTagName("body")[0];         
-        var newScript = document.createElement('script');
-        newScript.type = 'text/javascript';
-        newScript.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
-        headID.appendChild(newScript);
-    }, 1000);
-    setTimeout(function() {
-            var myMap = new ymaps.Map("map", {
-            center: [36.488592, 32.118670],
-            zoom: 17,
-            controls: ['smallMapDefaultSet']
-        }, {
-            searchControlProvider: 'yandex#search'
-        });
+setTimeout(() => {
+    const script = document.createElement('script');
 
-        myGeoObject = new ymaps.GeoObject({
-            geometry: {
-                type: "Point"
-            },
-        });
-        myMap.geoObjects
-            .add(myGeoObject)
-            .add(new ymaps.Placemark([36.488592, 32.118670], {
-                balloonContent: '<strong></strong>',
-                iconCaption: 'Mahmutlar mah.Sarihasanli cad. A88'
-            }, {
-                preset: 'islands#blueCircleDotIconWithCaption',
-                iconCaptionMaxWidth: '200'
-            }));
+    script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
 
-        myMap.setType('yandex#publicMap');
+    script.onload = () => {
+        ymaps.ready(initMap);
+    };
 
-        myMap.behaviors.disable('scrollZoom');
-        //на мобильных устройствах... (проверяем по userAgent браузера)
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            //... отключаем перетаскивание карты
-            myMap.behaviors.disable('drag');
+    document.body.appendChild(script);
+}, 2000);
+
+function initMap() {
+    const myMap = new ymaps.Map('map', {
+        center: [36.488592, 32.118670],
+        zoom: 16
+    });
+
+    const myPlacemark = new ymaps.Placemark(
+        [36.488592, 32.118670],
+        {
+            hintContent: 'Mahmutlar mah.Sarihasanli cad. A88',
+            balloonContent: 'Mahmutlar mah.Sarihasanli cad. A88'
+        },
+        {
+            iconLayout: 'default#image',
         }
-    }, 2000);
-});
+    );
+
+    myMap.geoObjects.add(myPlacemark);
+}
 
